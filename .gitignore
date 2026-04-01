@@ -1,0 +1,25 @@
+# Minecraft / modpack files
+*.jar
+saves/
+logs/
+crash-reports/
+screenshots/
+resourcepacks/
+shaderpacks/
+schematics/
+*.bak
+*.tmp
+
+# Local config overrides
+options.txt
+servers.dat
+usercache.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
