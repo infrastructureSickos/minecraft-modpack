@@ -21,7 +21,9 @@ jobs:
           go-version: "1.23"
 
       - name: Install packwiz
-        run: go install github.com/packwiz/packwiz@latest
+        # Pin to commit before "Version fetching refactoring" (#373) which
+        # introduced a nil pointer dereference in core/download.go
+        run: go install github.com/packwiz/packwiz@v0.0.0-20251124133319-52b123018f9e
 
       - name: Build .mrpack
         run: ./build.sh
