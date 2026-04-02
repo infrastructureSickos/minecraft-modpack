@@ -5,6 +5,10 @@ file = "README.md"
 hash = "247d0fce6ed0968a09a79b9aee447a5b6425a10cc9662ef282fd814b51fe4dbe"
 
 [[files]]
+file = "build.sh"
+hash = "59f204d1485f0fa1dc719285023cd42bcbb88937876735eb51eac601f22b03b7"
+
+[[files]]
 file = "configs/.gitkeep"
 hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
@@ -79,7 +83,7 @@ metafile = true
 
 [[files]]
 file = "mods/mods.md"
-hash = "73ae907a86ff0835a191dad9d142758fc24c7bbc5ba30e774682d41e73d4ec55"
+hash = "d06c5b3e8f220f753fd8453908be09601fbf735983352930d819fb78d934ae86"
 
 [[files]]
 file = "mods/neat.pw.toml"
