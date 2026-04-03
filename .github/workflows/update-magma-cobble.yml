@@ -1,0 +1,34 @@
+name: Update Magma Cobble
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Magma Cobble version to update to (leave empty for latest)'
+        required: false
+        default: ''
+  repository_dispatch:
+    types:
+      - magma-cobble-updated
+
+jobs:
+  update:
+    name: Update Magma Cobble in modpack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install packwiz
+        run: |
+          go install github.com/packwiz/packwiz@latest
+          echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      - name: Update magma-cobble
+        run: packwiz update magma-cobble
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update magma-cobble mod\n\nCo-Authored-By: Paperclip <noreply@paperclip.ing>"
+          branch: main
